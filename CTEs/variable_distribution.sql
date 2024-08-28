@@ -3,7 +3,7 @@ SELECT
     userId,
     COUNT(*) AS num_link_clicks
 FROM
-    frontEndEventLog el
+    frontEndEventLog
 WHERE
     eventId = 5
 GROUP BY
