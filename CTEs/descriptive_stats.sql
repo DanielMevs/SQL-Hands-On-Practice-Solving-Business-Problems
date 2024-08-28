@@ -1,17 +1,17 @@
 with monthly_revs as (
 SELECT
     date_trunc('month', s.OrderDate) as ordermonth,
-    p.productname,
+    p.productName,
     sum(s.revenue) as revenue
 FROM
     Subscriptions as s
 JOIN
     products as p 
-ON s.productid = p.productid
+ON s.productId = p.producId
 WHERE
     s.OrderDate between '2022-01-01' and '2022-12-31'
 GROUP BY
-    date_trunc('month', s.OrderDate), p.productname
+    date_trunc('month', s.OrderDate), p.productName
 )    
 
 SELECT
