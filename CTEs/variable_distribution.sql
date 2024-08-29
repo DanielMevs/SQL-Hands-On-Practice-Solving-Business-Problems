@@ -1,4 +1,4 @@
-with email_link_clicks as(
+WITH email_link_clicks AS(
 SELECT
     userId,
     COUNT(*) AS num_link_clicks
@@ -12,7 +12,7 @@ GROUP BY
 
 SELECT
     num_link_clicks,
-    COUNT(*) as num_users
+    COUNT(*) AS num_users
 FROM
     email_link_clicks
 GROUP BY
