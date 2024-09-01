@@ -1,4 +1,5 @@
 SELECT
+<<<<<<< HEAD
     CUSTOMERID,
     COUNT(PRODUCTID) AS num_products,
     SUM(NUMBEROFUSERS) AS total_users,
@@ -7,6 +8,6 @@ SELECT
         THEN 1 ELSE 0
     END AS upsell_opportunity
 FROM
-    SUBSCRIPTIONS
+    subscriptions
 GROUP BY
-    CUSTOMERID;
+    customerId
