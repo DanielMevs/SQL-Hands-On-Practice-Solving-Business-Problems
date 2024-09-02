@@ -1,5 +1,4 @@
 SELECT
-<<<<<<< HEAD
     CUSTOMERID,
     COUNT(PRODUCTID) AS num_products,
     SUM(NUMBEROFUSERS) AS total_users,
